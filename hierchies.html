@@ -1,0 +1,158 @@
+ 
+
+
+ <div class="card">
+    <div class="card-block">
+        <div class="row"> 
+
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-block">
+                <h3 class="card-title">Abstract Hierarchy:</h3>
+                <br />
+                    <div id="jstreeAbstract">    
+                        <ul id="m-1" class="list-group" >
+                            <li id="abstract_{{$index+1}}" ng-repeat="linha in [].constructor(4) track by $index ">
+                                <strong>({{$index+1}}): </strong>                
+                                    {{hierchies.abstract.topics[($index)].split(",").slice(0,2).join() + " ..."}}
+
+                                <ul style="margin-left:20px">
+                                    <li id="abstract_{{2*($index+1)+3}}">   
+                                                      
+                                        <strong>({{2*($index+1)+3}}): </strong>
+                                        {{hierchies.abstract.topics[ 2*($index+1)+3-1 ].split(",").slice(0,2).join() + " ..."}}
+                                    </li>
+                                    <li id="abstract_{{2*($index+1)+4}}">                     
+                                        <strong>({{2*($index+1)+4}}): </strong>
+                                        {{hierchies.abstract.topics[ 2*($index+1)+4-1 ].split(",").slice(0,2).join() + " ..."}} 
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+    
+<br />
+<br />
+<div  class="card">
+  <h5 class="card-header">Complete Topics</h5>
+  <div  class="card-block"> 
+  <p id = "cardTopicsAbstract" align='justify'>
+     
+  </p>   
+  </div>
+</div>
+
+<br />
+<br />
+                        <div  id="abstractRanking">
+                            <h3>Ranking</h3>
+                                <table id="abstractTable" class="table table-hover">
+                                    <thead>
+                                        <th>#</th>
+                                        <th>DocID</th>
+                                        <th>Conference</th>
+                                        <th>Year</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="linha in [].constructor(tableA.length) track by $index" style="cursor:pointer;" ng-click="clicks( $index, tableA, 'abstract')">    
+                                            <td>{{tableA[$index].id}}</td>  
+                                            <td>{{tableA[$index].col1}}</td>    
+                                            <td>{{tableA[$index].col2}}</td>   
+                                            <td>{{tableA[$index].col3}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>            
+                        </div>
+
+
+              </div>
+            </div>
+          </div>
+
+
+
+        <div class="col-md-6">
+            <div class="card">
+              <div class="card-block">
+                <h3 class="card-title">Title Hierarchy:</h3>
+                <br />
+                    <div id="jstreeTitle">    
+                        <ul id="m-1" class="list-group" >
+                            
+                            <li id="title_{{$index+1}}" ng-repeat="linha in [].constructor(4) track by $index ">
+                                <strong>({{$index+1}}): </strong>
+                                {{ hierchies.title.topics[ $index ].split(",").slice(0,2).join() + " ..."  }} 
+
+                                <ul style="margin-left:20px">
+                                    <li id="title_{{2*($index+1)+3}}"> 
+                                        <strong>({{2*($index+1)+3}}): </strong>
+                                        {{hierchies.title.topics[ 2*($index+1)+3-1 ].split(",").slice(0,2).join() + " ..."}}
+                                    </li>
+                                    <li id="title_{{2*($index+1)+4}}"> 
+                                        <strong>({{2*($index+1)+4}}): </strong>
+                                        {{hierchies.title.topics[ 2*($index+1)+4-1 ].split(",").slice(0,2).join() + " ..."}} 
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+<br />
+<br />
+<div  class="card">
+  <h5 class="card-header">Complete Topics</h5>
+  <div  class="card-block"> 
+  <p id = "cardTopicsTitle" align='justify'>
+     
+  </p>   
+  </div>
+</div>
+
+<br />
+<br />
+                        <div id="titleRanking">
+                            <h3>Ranking</h3>
+                                <table id="titleTable" class="table table-hover">
+                                    <thead>
+                                        <th>#</th>
+                                        <th>DocID</th>
+                                        <th>Conference</th>
+                                        <th>Year</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="linha in [].constructor(tableT.length) track by $index" style="cursor:pointer;" ng-click="clicks( $index, tableT, 'title')">    
+                                                <td>{{tableT[$index].id}}</td>  
+                                                <td>{{tableT[$index].col1}}</td>    
+                                                <td>{{tableT[$index].col2}}</td>   
+                                                <td>{{tableT[$index].col3}}</td>
+                                            </tr>
+                                    </tbody>
+                                </table>            
+                        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div id = "myModal" class="modal fade">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Paper Description</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+

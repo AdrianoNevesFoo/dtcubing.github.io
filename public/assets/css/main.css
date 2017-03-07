@@ -1,0 +1,78 @@
+ul#filtros{
+  width: 100%;
+  display: block;
+  height: 50px;
+}
+ul#filtros li{
+  width: 30%;
+  list-style:none;
+  float:left;
+}
+#dhcubing, #han{
+  width: 100%;
+  height: 350px;
+  display: block;
+  padding: 0px;
+  margin: 0px;
+}
+
+#alert{
+  margin-bottom: 0px;
+  font-size: 20px;
+}
+
+#select2{
+  width: 200px;
+}
+
+
+#alertCard{
+  margin-bottom: 30px;
+}
+
+.col2{
+  margin-bottom: 30px; 
+  display: block;
+  clear: both;
+  height: 410px;
+}
+  .col2>.panel.panel-default.han, 
+  .col2>.panel.panel-primary.dhcubing{
+    width: 49%;
+    height: 434px;
+    display: block;
+    float: left;
+  }
+  .col2>.panel.panel-primary.dhcubing{
+    margin-left: 5px;
+  }
+   .col2>.panel.panel-default.height, 
+  .col2>.panel.panel-primary.height{
+    width: 49%;
+    float:left;
+    height: 500px;
+    overflow-y: auto;
+    
+  }
+  .col2>.panel.panel-primary.height{ margin-left: 5px; }
+  .splitTable{
+    margin-left: 140px;
+    float:left;
+    width: 33%;
+  }
+  li{
+    list-style: none;
+  }
+  .well.well-lg.custom{
+    padding: 4px 10px;
+    cursor:pointer;
+  }
+  
+#alertMessage{
+  margin-bottom: 0px;
+}
+.alert{
+  font-size: 50px;
+}
+
+

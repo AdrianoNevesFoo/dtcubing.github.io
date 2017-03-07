@@ -1,0 +1,91 @@
+
+<div id = "alertCard" class="card card-inverse" style="background-color: #333; border-color: #333;" data-toggle="popover">
+  <div class="card-block">
+    <h3 class="card-title">Prototype still under construction...</h3>
+    <p class="card-text">Some cells may not work...</p>    
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">F<div id = "myModal" class="modal fade">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Paper Description</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>ilters</h3>
+  </div>
+  <div class="card-block">
+    <div class="row">
+
+	  <div class="col-md-3">
+	    <div class="card">
+	      <div class="card-block">
+	        <h3 class="card-title">Text Filter:</h3>
+	        <div class="show" id="conference" >
+				<select id = "selectFilter" class="custom-select">
+				  <option selected>Open this select menu</option>
+				</select>	
+			</div>
+	      </div>
+	    </div>
+	  </div>
+
+
+	  <div class="col-md-3">
+	    <div class="card">
+	      <div class="card-block">
+	        <h3 class="card-title">Conferences:</h3>
+	        	<div class="show" id="conference" >
+					<div class="col-md-12">
+						<a href="#" id="conf" ng-click="all('conf')">ALL</a>
+					</div>
+					<div id="checkConferenceID" class="" ng-repeat="(key, conf) in conference">					
+						<div class="col-md-6">
+							<input class="{{conf}}" type="checkbox" name="conf" value="{{conf}}">
+							{{ conf }}
+						</div>
+						
+					</div>
+				</div>
+	      </div>
+	    </div>
+	  </div>
+
+
+	  <div class="col-md-3">
+	    <div class="card">
+	      <div class="card-block">
+	        <h3 class="card-title">Years:</h3>
+	        	<div class="show" id="conference" >
+					<div id="checkYearID"class="" ng-repeat="(key, _year) in year">
+						<div class="col-md-6">
+							<input class="{{ _year }}" type="checkbox"  name="year"  value="{{ _year }}">
+							{{ _year }}
+						</div>					
+					</div>
+				</div>
+	      </div>
+	    </div>
+	  </div>
+
+
+	
+	</div>
+	<div class="row">
+		<button class="btn btn-primary" ng-click="submit()" >Submit</button>
+	</div>
+  </div>
+</div>
